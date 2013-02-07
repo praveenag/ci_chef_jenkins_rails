@@ -1,0 +1,25 @@
+{
+  "run_list": [
+    "recipe[main]"
+  ],
+  "postgresql": {
+    "password": {
+      "postgres": "TODO-change-ME"
+    }
+  },
+  "nginx": {
+    "basic_auth_user": "TODO-change-ME",
+    "basic_auth_password": "TODO-change-ME",
+    "default_site_enabled": true
+  },
+  "app": {
+    "name": "jenkins",
+    "web_dir": "/var/data/www/apps/jenkins"
+  },
+  "user":{
+    "name": "jenkins"
+  },
+  "jenkins": {
+    "plugins": ["git", "ansicolor", "xvfb", "ruby-runtime", "rake", "rvm", "rubyMetrics"]
+  }
+}
