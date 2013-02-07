@@ -6,12 +6,13 @@ TODO: WIP
 
 * force connections to go through nginx
 * update all README content
+* pre-load with sample config for a rails project
 
 ## Disclaimer and Alternatives
 
 All code used in this repo was written by a bunch of smart people (not me). I hobbled together bits, mostly from the lobot project while trying to gain more knowledge about how chef and knife work.
 
-TODO: lobot link 
+TODO: lobot link
 
 
 ## How to use
@@ -36,7 +37,7 @@ prepare your server - TODO: digitalocean / vagrant
 # replace user and host - i.e. root@192.168.0.0
 knife solo prepare user@host --omnibus-version=10.18.2 --node-name=main
 # install recipes, could take some time...
-knife solo cook user@host nodes/main.json --skip-chef-check 
+knife solo cook user@host nodes/main.json --skip-chef-check
 ```
 
 ## What do you get?
@@ -46,7 +47,7 @@ knife solo cook user@host nodes/main.json --skip-chef-check
   * TODO: finish list
 * nginx with ssl and basic authorization so your CI is protected
 * postgresql - for running your rails tests
-* nodejs - for compiling your rails assets 
+* nodejs - for compiling your rails assets
 
 
 
