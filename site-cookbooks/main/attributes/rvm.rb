@@ -1,0 +1,1 @@
+# node['rvm']['user_installs'] = [{ 'user' => 'jenkins' }]

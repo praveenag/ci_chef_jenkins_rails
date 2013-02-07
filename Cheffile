@@ -3,31 +3,10 @@
 
 site 'http://community.opscode.com/api/v1'
 
-# cookbook 'chef-client'
-
-# cookbook 'apache2', '>= 1.0.0'
-
-
 cookbook 'postgresql'
 cookbook 'nginx'
 cookbook 'nodejs'
 cookbook 'sqlite'
-
-# cookbook 'apt'
-
-# cookbook 'rvm',
-#   :git => "https://github.com/fnichol/chef-rvm.git"
-
-# cookbook "jenkins",
-#   :git => "https://github.com/house9/chef-jenkins",
-#   :ref => "develop"
-
-# cookbook 'rvm'
-
-# cookbook 'pivotal_ci',
-#   :git => "https://github.com/pivotal/lobot",
-#   :path => "chef/cookbooks/pivotal_ci"
-
 
 cookbook 'rvm',
   :git => 'git://github.com/fnichol/chef-rvm.git',

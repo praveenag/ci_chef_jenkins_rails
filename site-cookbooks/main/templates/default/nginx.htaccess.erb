@@ -1,0 +1,3 @@
+<% if node['nginx']['basic_auth_user'] && node['nginx']['basic_auth_password'] %>
+<%= "#{node['nginx']['basic_auth_user']}:#{node['nginx']['basic_auth_password'].crypt("AA")}" %>
+<% end %>
