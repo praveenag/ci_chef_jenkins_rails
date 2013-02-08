@@ -4,7 +4,6 @@ This repo contains recipes for provisioning a jenkins server set up to run CI fo
 
 TODO: WIP
 
-* force connections to go through nginx
 * update all README content
 * pre-load with sample config for a rails project
 

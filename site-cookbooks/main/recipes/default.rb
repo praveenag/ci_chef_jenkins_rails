@@ -92,3 +92,34 @@ service "jenkins" do
   action :restart
 end
 
+
+# *******************************
+# allow on 80, 443, 22 - don't leave jenkins on 8080 exposed
+node[:firewall][:rules] << {
+  "block jenkins, force through nginx" => {
+    "port" => "8080",
+    "action" => "deny"
+  }
+}
+
+node[:firewall][:rules] << {
+  "ssh" => {
+    "port" => "22"
+  }
+}
+
+node[:firewall][:rules] << {
+  "http" => {
+    "port" => "80"
+  }
+}
+
+node[:firewall][:rules] << {
+  "ssl" => {
+    "port" => "443"
+  }
+}
+
+include_recipe "ufw"
+
+
