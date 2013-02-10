@@ -1,5 +1,6 @@
 cert_path = node["ssl_settings"]["cert_path"]
 ca_path = node["ssl_settings"]["ca_path"]
+serial_number = node["ssl_settings"]["serial_number"]
 
 ["/etc/pki/tls/certs", "/usr/local", "/usr/local/etc", cert_path, ca_path, "#{ca_path}/keys", "#{ca_path}/requests", "#{ca_path}/certs", "#{ca_path}/newcerts"].each do |dir|
   directory dir do
@@ -14,7 +15,7 @@ end
 file "#{ca_path}/index.txt"
 
 execute "create serial" do
-  command "echo '01\n' > #{ca_path}/serial"
+  command "echo '#{serial_number}\n' > #{ca_path}/serial"
   not_if { ::File.exists?("#{ca_path}/serial") }
 end
 
