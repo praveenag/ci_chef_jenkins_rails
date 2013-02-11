@@ -14,8 +14,8 @@ All code used in this repo was written by a bunch of smart people (not me). I ho
 If you want to run your CI on EC2, then you should use lobot!
 ```
 
-* [https://github.com/pivotal/lobot](https://github.com/pivotal/lobot) 
-* [http://www.confreaks.com/videos/1214-jucsf2012-jenkins-with-ruby-on-rails-on-ec2](http://www.confreaks.com/videos/1214-jucsf2012-jenkins-with-ruby-on-rails-on-ec2) 
+* [https://github.com/pivotal/lobot](https://github.com/pivotal/lobot)
+* [http://www.confreaks.com/videos/1214-jucsf2012-jenkins-with-ruby-on-rails-on-ec2](http://www.confreaks.com/videos/1214-jucsf2012-jenkins-with-ruby-on-rails-on-ec2)
 
 ### Hosted CI might be a better alternative for you?
 
@@ -79,12 +79,16 @@ You will want updates to your repo to automatically kick off CI Builds, configur
 
 <div style="text-align:center">
     <img src="docs/images/github_1.png" style="width: 800px; border: 1px solid #ebebeb; padding: 2px" />
-    
+    <hr />
+
     <img src="docs/images/github_2.png" style="width: 800px; border: 1px solid #ebebeb; padding: 2px" />
-    
+    <hr />
+
     <img src="docs/images/github_3.png" style="width: 800px; border: 1px solid #ebebeb; padding: 2px" />
-    
+    <hr />
+
     <img src="docs/images/github_4.png" style="width: 800px; border: 1px solid #ebebeb; padding: 2px" />
+    <hr />
 </div>
 
 Now you should be good to go!
@@ -92,12 +96,15 @@ Now you should be good to go!
 Check the sample job configuration which uses the same "Install Notes" from the "Jenkins (Git plugin)" Service Hook, you will need to add that step to any new Jenkins Jobs you add to your server.
 
 
-## Random Notes...
+## Misc Random Notes...
+
+```
 bundle install gems
 knife solo init .
 librarian-chef init
 knife solo prepare root@host --omnibus-version=10.18.2
 knife solo cook root@host nodes/main.json --skip-chef-check
+```
 
 ```
 https://github.com/house9/ci_sample_app.git

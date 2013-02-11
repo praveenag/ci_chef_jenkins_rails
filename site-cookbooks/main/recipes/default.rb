@@ -87,6 +87,9 @@ execute "createuser jenkins --superuser --no-password" do
     :group => "postgres"
 end
 
+
+include_recipe "main::jenkins_sample_job"
+
 # restart jenkins for good measure
 service "jenkins" do
   action :restart
