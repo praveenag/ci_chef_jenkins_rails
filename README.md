@@ -2,10 +2,6 @@
 
 This repo contains recipes for provisioning a jenkins server set up to run CI for rails apps.
 
-TODO: WIP
-
-* pre-load with sample config for a rails project
-
 ## *Disclaimer and Alternatives*
 
 All code used in this repo was written by a bunch of smart people (not me). I hobbled together bits, mostly from the lobot project while trying to gain more knowledge about how chef and knife work and made some small tweaks here and there.
