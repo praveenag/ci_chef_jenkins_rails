@@ -37,7 +37,7 @@ This project was tested against ubuntu 12.04 32-bit server hosted on DigitalOcea
 * nginx with ssl and basic authorization so your CI is protected
 * postgresql - for running your rails tests
 * nodejs - for compiling your rails assets
-
+* jenkins user ssh key and StrictHostKeyChecking no for github.com
 
 
 
@@ -90,6 +90,19 @@ You will want updates to your repo to automatically kick off CI Builds, configur
 Now you should be good to go!
 
 Check the sample job configuration which uses the same "Install Notes" from the "Jenkins (Git plugin)" Service Hook, you will need to add that step to any new Jenkins Jobs you add to your server.
+
+### Private Repo
+
+* Add a new 'Deploy Key' for the jenkins user in the github UI
+
+```
+# copy the jenkins public ssh key
+scp user@host:/var/lib/jenkins/.ssh/id_rsa.pub ~/temp/jenkins_id_rsa.pub
+cat ~/temp/jenkins_id_rsa.pub
+```
+
+* copy and paste the value into github UI
+
 
 ## Other Resources
 
