@@ -87,6 +87,20 @@ execute "createuser jenkins --superuser --no-password" do
     :group => "postgres"
 end
 
+# *******************************
+# generate ssh key for jenkins user
+execute "ssh-keygen -f #{node["jenkins"]["home"]}/.ssh/id_rsa -t rsa -N ''" do
+  user "jenkins"
+  cwd "#{node["jenkins"]["home"]}"
+
+  not_if { ::File.exists?("#{node["jenkins"]["home"]}/.ssh/id_rsa.pub") }
+end
+
+cookbook_file "#{node["jenkins"]["home"]}/.ssh/config" do
+  source "jenkins_ssh_config"
+  owner "jenkins"
+  not_if { ::File.exists?("#{node["jenkins"]["home"]}/.ssh/config") }
+end
 
 include_recipe "main::jenkins_sample_job"
 
