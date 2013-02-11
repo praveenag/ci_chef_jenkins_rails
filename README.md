@@ -91,6 +91,9 @@ Now you should be good to go!
 
 Check the sample job configuration which uses the same "Install Notes" from the "Jenkins (Git plugin)" Service Hook, you will need to add that step to any new Jenkins Jobs you add to your server.
 
+## Other Resources
+
+* [http://nepalonrails.com/post/14217655627/set-up-jenkins-ci-on-ubuntu-for-painless-rails3-app-ci](http://nepalonrails.com/post/14217655627/set-up-jenkins-ci-on-ubuntu-for-painless-rails3-app-ci)
 
 ## Misc Random Notes...
 
