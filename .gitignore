@@ -1,6 +1,7 @@
 /cookbooks
 /tmp
 .vagrant
-
+sample-spring-app/out
+sample-spring-app/.idea
 .DS_Store
 
