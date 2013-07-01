@@ -4,4 +4,5 @@
 sample-spring-app/out
 sample-spring-app/.idea
 .DS_Store
-
+Gemfile.lock
+precise64.box

@@ -4,12 +4,12 @@
   ],
   "postgresql": {
     "password": {
-      "postgres": "TODO-change-ME"
+      "postgres": "password"
     }
   },
   "nginx": {
-    "basic_auth_user": "TODO-change-ME",
-    "basic_auth_password": "TODO-change-ME",
+    "basic_auth_user": "nginx",
+    "basic_auth_password": "password",
     "default_site_enabled": true
   },
   "app": {
